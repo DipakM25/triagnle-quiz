@@ -12,7 +12,8 @@ function calculateHypotenuse() {
   var sideTwo = Number(sideInput[1].value);
 
   if (sideOne > 0 && sideTwo > 0) {
-    var hypotenuse = calculateSquareOfSides(sideOne, sideTwo);
+    var sideThree = calculateSquareOfSides(sideOne, sideTwo);
+    var hypotenuse = Math.sqrt(sideThree);
     output.style.color = "green";
     output.innerText = "Hypotenuse of a triangle is " + hypotenuse;
   } else {
